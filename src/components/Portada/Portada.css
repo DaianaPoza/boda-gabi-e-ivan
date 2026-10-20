@@ -1,0 +1,91 @@
+.portada {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 1.1s ease, visibility 1.1s ease, transform 1.1s ease;
+}
+
+.portada--abierta {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.portada__fondo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: zoomFondo 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomFondo {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+.portada__contenido {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  gap: 3rem; /* espacio entre todos los elementos */
+}
+
+.portada__nombres {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.portada__boton {
+  margin-top: 1.5rem; /* espacio extra antes del botón */
+}
+
+
+
+
+
+
+/* ===== Efecto para invitar al clic ===== */
+.portada__boton {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+/* Halo que sale del botón */
+.portada__boton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--verde);
+  opacity: 0;
+  pointer-events: none;
+  animation: halo 2.4s ease-out 2.8s infinite;
+}
+
+@keyframes halo {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.35, 1.6);
+    opacity: 0;
+  }
+}
+
+
+
+/* Al pasar el mouse, se frena el halo */
+.portada__boton:hover::after {
+  animation: none;
+}

@@ -1,0 +1,104 @@
+.fecha__corazon {
+  display: inline-block;
+  font-size: 0.8em;
+  animation: latido 1.6s ease-in-out infinite;
+}
+
+/* Hoja del calendario */
+.fecha__calendario {
+  position: relative;
+  width: min(100%, 340px);
+  padding: 2rem 1.2rem 1.4rem;
+  background-color: var(--crema-claro);
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(75, 87, 57, 0.18);
+  transform: rotate(-2deg);
+}
+
+/* Cinta de papel arriba */
+.fecha__cinta {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 90px;
+  height: 26px;
+  background-color: rgba(138, 150, 112, 0.35);
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+.fecha__mes {
+  margin-bottom: 0.8rem;
+}
+
+/* Grilla de días */
+.fecha__grilla {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+}
+
+.fecha__dia-semana {
+  font-weight: 700;
+  font-size: var(--tam-texto-chico);
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(138, 150, 112, 0.4);
+  margin-bottom: 0.3rem;
+}
+
+.fecha__dia {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--tam-texto-chico);
+  color: var(--verde-suave);
+}
+
+/* EL DÍA DEL EVENTO */
+.fecha__dia--evento {
+  background-color: var(--verde);
+  color: var(--crema);
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 50%;
+  animation: latido 1.6s ease-in-out 2.5s infinite;
+}
+
+/* Círculo hecho a mano alrededor */
+.fecha__circulo {
+  position: absolute;
+  inset: -30%;
+  width: 160%;
+  height: 160%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.fecha__circulo path {
+  fill: none;
+  stroke: var(--verde);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.reveal--visible .fecha__circulo path {
+  animation: dibujarLinea 1.4s ease 1.6s forwards;
+}
+
+.fecha__boton {
+  margin-top: 1rem;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+.fecha__hora {
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+}

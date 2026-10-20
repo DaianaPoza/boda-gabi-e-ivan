@@ -1,0 +1,90 @@
+.header {
+  position: relative;
+  min-height: 100svh;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Nombres levemente inclinados */
+.header__nombres {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(-4deg);
+}
+
+/* Subrayado hecho a mano que se dibuja */
+.header__frase {
+  position: relative;
+  display: inline-block;
+}
+
+.header__subrayado {
+  position: absolute;
+  left: -5%;
+  bottom: -0.7rem;
+  width: 110%;
+  height: 0.8rem;
+  overflow: visible;
+}
+
+.header__subrayado path {
+  fill: none;
+  stroke: var(--verde-suave);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+}
+
+.reveal--visible .header__subrayado path {
+  animation: dibujarLinea 1.2s ease 2s forwards;
+}
+
+@keyframes dibujarLinea {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Indicador para bajar */
+
+.header__deslizar {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem 0.9rem;
+  background-color: rgba(251, 247, 238, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(75, 87, 57, 0.15);
+}
+
+.header__deslizar-texto {
+  font-family: var(--fuente-textos);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--verde-oscuro);
+}
+
+.header__chevron {
+  width: 16px;
+  height: 16px;
+  border-right: 3px solid var(--verde-oscuro);
+  border-bottom: 3px solid var(--verde-oscuro);
+  animation: rebotarFlecha 1.6s ease-in-out infinite;
+}
+
+
+@keyframes rebotarFlecha {
+  0%, 100% { transform: rotate(45deg) translate(0, 0); }
+  50%      { transform: rotate(45deg) translate(5px, 5px); }
+}
+
+
+
+
+.header__casamos {
+  font-size: clamp(2.4rem, 11vw, 3.4rem);
+  font-weight: 500;
+}

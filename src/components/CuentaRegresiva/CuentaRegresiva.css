@@ -1,0 +1,56 @@
+.cuenta__grilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+  width: min(100%, 420px);
+  margin: 0.5rem 0;
+}
+
+/* Tarjetitas de papel */
+.cuenta__tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1rem 0.3rem 0.8rem;
+  background-color: var(--crema-claro);
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(75, 87, 57, 0.15);
+}
+
+.cuenta__tarjeta:nth-child(odd)  { transform: rotate(-3deg); }
+.cuenta__tarjeta:nth-child(even) { transform: rotate(2deg); }
+
+.cuenta__numero {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(2.4rem, 11vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--verde);
+  animation: saltoNumero 0.4s ease;
+}
+
+.cuenta__etiqueta {
+  font-family: var(--fuente-textos);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.cuenta__llego {
+  font-size: clamp(2.4rem, 11vw, 3.2rem);
+}
+
+@keyframes saltoNumero {
+  0%   { transform: translateY(-6px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Celulares chicos: 2 x 2 */
+@media (max-width: 380px) {
+  .cuenta__grilla {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: min(100%, 260px);
+  }
+}

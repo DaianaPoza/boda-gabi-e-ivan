@@ -1,0 +1,52 @@
+/* Notas musicales que bailan */
+.playlist__notas {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.playlist__nota {
+  width: 46px;
+  height: 46px;
+  fill: none;
+  stroke: var(--verde);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: bailarNota 2s ease-in-out infinite;
+}
+
+.playlist__nota--chica {
+  width: 30px;
+  height: 30px;
+  animation-delay: 0.5s;
+}
+
+@keyframes bailarNota {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50%      { transform: translateY(-8px) rotate(6deg); }
+}
+
+.playlist__texto {
+  max-width: 340px;
+}
+
+/* Botón con ícono de Spotify */
+.playlist__boton {
+  margin-top: 0.8rem;
+}
+
+.playlist__spotify {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.playlist__boton--pronto {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.playlist__boton--pronto:hover {
+  transform: none;
+  background-color: var(--verde);
+}

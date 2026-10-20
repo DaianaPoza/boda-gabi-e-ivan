@@ -1,0 +1,84 @@
+.footer {
+  padding-bottom: 5rem;
+  gap: 1.4rem;
+}
+
+.footer__texto {
+  max-width: 330px;
+}
+
+.footer__pronto {
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  font-weight: 500;
+}
+
+/* Línea — corazón — línea */
+.footer__divisor {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer__linea {
+  width: 60px;
+  height: 1.5px;
+  background-color: var(--verde-suave);
+}
+
+.footer__corazon {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: var(--verde);
+  animation: latido 1.6s ease-in-out infinite;
+}
+
+/* Nombres inclinados, como en el header */
+.footer__nombres {
+  font-size: clamp(3rem, 14vw, 5rem);
+}
+
+.footer__nombres-texto {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(-4deg);
+}
+
+
+
+/* Texto de agradecimiento más grande */
+.footer__texto {
+  max-width: 340px;
+  font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+  font-weight: 700;
+}
+
+/* Tarjetita con nombres y fecha */
+.footer__firma {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 2rem 2.2rem 1.6rem;
+  background-color: rgba(251, 247, 238, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(75, 87, 57, 0.18);
+  transform: rotate(-2deg);
+}
+
+.footer__cinta {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 90px;
+  height: 26px;
+  background-color: rgba(138, 150, 112, 0.35);
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.footer__fecha {
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  margin-right: -0.25em;   /* compensa el espacio extra del final y queda centrada */
+  color: var(--verde-oscuro);
+}

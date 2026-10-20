@@ -1,0 +1,111 @@
+.regalos__icono svg {
+  width: 44px;
+  height: 44px;
+  fill: none;
+  stroke: var(--verde);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.regalos__texto {
+  max-width: 340px;
+}
+
+/* Desplegable con animación suave */
+.regalos__desplegable {
+  display: grid;
+  grid-template-rows: 0fr;
+  width: 100%;
+  opacity: 0;
+  transition: grid-template-rows 0.5s ease, opacity 0.5s ease;
+}
+
+.regalos__desplegable--abierto {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.regalos__interior {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+/* Tarjeta del alias */
+.regalos__tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: min(100%, 320px);
+  margin: 2rem 0 1.5rem;
+  padding: 2rem 1.2rem 1.6rem;
+  background-color: var(--crema-claro);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(75, 87, 57, 0.18);
+  transform: rotate(-2deg);
+}
+
+.regalos__cinta {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 90px;
+  height: 26px;
+  background-color: rgba(138, 150, 112, 0.35);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.regalos__etiqueta {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.regalos__etiqueta--titular {
+  margin-top: 0.8rem;
+}
+
+/* Alias + botón Copiar en la misma línea */
+/* Recuadro con alias + botón Copiar */
+.regalos__fila-alias {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.2rem auto 0;
+  padding: 0.35rem 0.35rem 0.35rem 1rem;
+  border: 1.5px solid rgba(138, 150, 112, 0.5);
+  border-radius: 999px;
+  background-color: var(--blanco);
+}
+
+.regalos__alias {
+  font-family: var(--fuente-textos);
+  font-size: var(--tam-texto);
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.regalos__copiar {
+  min-width: 92px;           /* no cambia de tamaño al decir "¡Copiado!" */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+/* Sin borde azul al hacer clic (solo con teclado) */
+.regalos__copiar:focus {
+  outline: none;
+}
+
+.regalos__copiar:focus-visible {
+  outline: 2px solid var(--verde-oscuro);
+  outline-offset: 2px;
+}
+
+.regalos__titular {
+  font-weight: 700;
+}

@@ -1,0 +1,48 @@
+.fondo-tarjeta {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100%, 560px);   /* en compu acompaña el ancho del contenido */
+  transform: translateX(-50%);
+  z-index: 0;
+  overflow: hidden;
+  animation: aparecerFondo 1.5s ease forwards;
+}
+
+/* Movimiento lento, como si las flores se mecieran */
+.fondo-tarjeta__imagen {
+  position: absolute;
+  inset: -4%;
+  background-size: cover;
+  background-position: center;
+  animation: mecerFondo 24s ease-in-out infinite alternate;
+}
+
+@keyframes mecerFondo {
+  0%   { transform: scale(1) rotate(0deg) translate(0, 0); }
+  50%  { transform: scale(1.04) rotate(0.6deg) translate(-1%, 0.5%); }
+  100% { transform: scale(1.02) rotate(-0.6deg) translate(1%, -0.5%); }
+}
+
+/* Brillo suave que recorre la imagen */
+.fondo-tarjeta__luz {
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 40%
+  );
+  animation: moverLuz 18s ease-in-out infinite alternate;
+}
+
+@keyframes moverLuz {
+  from { transform: translate(-20%, -15%); }
+  to   { transform: translate(20%, 15%); }
+}
+
+@keyframes aparecerFondo {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

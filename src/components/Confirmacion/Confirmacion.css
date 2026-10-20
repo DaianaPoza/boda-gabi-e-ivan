@@ -1,0 +1,173 @@
+.confirmacion__texto {
+  max-width: 340px;
+}
+
+/* Caja del formulario */
+.confirmacion__caja {
+  width: min(100%, 380px);
+  margin-top: 0.5rem;
+  padding: 1.8rem 1.3rem;
+  background-color: var(--crema-claro);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(75, 87, 57, 0.15);
+}
+
+.confirmacion__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.confirmacion__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.confirmacion__etiqueta {
+  padding: 0;
+  margin-bottom: 0.3rem;
+  font-family: var(--fuente-textos);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+/* Botones Sí / No */
+.confirmacion__opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.confirmacion__opcion {
+  padding: 0.9rem 0.5rem;
+  border: 2px solid var(--verde);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--verde);
+  font-family: var(--fuente-textos);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+}
+
+.confirmacion__opcion--activa {
+  background-color: var(--verde);
+  color: var(--crema);
+  transform: scale(1.03);
+}
+
+/* Bloque de cada persona */
+.confirmacion__persona {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1.5px dashed var(--verde-suave);
+  border-radius: 14px;
+}
+
+.confirmacion__persona-titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--verde);
+}
+
+.confirmacion__error {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(160, 69, 46, 0.1);
+  color: #9a4129;
+  font-weight: 700;
+  text-align: center;
+}
+
+.confirmacion__enviar {
+  align-self: center;
+  margin-top: 0.5rem;
+}
+
+.confirmacion__enviar:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+/* Mensaje de gracias */
+.confirmacion__gracias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* ===== Mensaje de respuesta registrada ===== */
+.confirmacion__tilde {
+  width: 64px;
+  height: 64px;
+}
+
+.confirmacion__tilde circle,
+.confirmacion__tilde path {
+  fill: none;
+  stroke: var(--verde);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.confirmacion__tilde circle {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: dibujarLinea 0.8s ease forwards;
+}
+
+.confirmacion__tilde path {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: dibujarLinea 0.5s ease 0.7s forwards;
+}
+
+.confirmacion__registrada {
+  font-family: var(--fuente-textos);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.confirmacion__resumen {
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 1rem;
+  border: 1.5px dashed var(--verde-suave);
+  border-radius: 14px;
+}
+
+.confirmacion__resumen-titulo {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.confirmacion__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}

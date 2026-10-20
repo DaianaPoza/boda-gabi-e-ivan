@@ -1,0 +1,89 @@
+/* Cámara con flash */
+.album__icono {
+  position: relative;
+  font-size: 2.8rem;
+  color: var(--verde);
+  line-height: 0;
+  animation: sacudirCamara 4s ease-in-out infinite;
+}
+
+.album__flash {
+  position: absolute;
+  inset: -40%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 65%);
+  opacity: 0;
+  animation: flash 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0%, 85%, 100% { opacity: 0; }
+  88%           { opacity: 1; }
+}
+
+@keyframes sacudirCamara {
+  0%, 82%, 100% { transform: rotate(0deg) scale(1); }
+  86%           { transform: rotate(-6deg) scale(1.08); }
+  90%           { transform: rotate(4deg) scale(1); }
+}
+
+.album__texto {
+  max-width: 340px;
+}
+
+/* Pasos */
+.album__pasos {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: min(100%, 340px);
+  background-color: var(--crema-claro);
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(75, 87, 57, 0.12);
+  text-align: left;
+}
+
+.album__paso {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.album__numero {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--verde);
+  color: var(--crema);
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Botón */
+.album__boton {
+  margin-top: 0.8rem;
+}
+
+.album__boton svg {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.album__boton--pronto {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.album__boton--pronto:hover {
+  transform: none;
+  background-color: var(--verde);
+}

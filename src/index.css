@@ -1,0 +1,272 @@
+/* ===========================
+   VARIABLES GENERALES
+   =========================== */
+:root {
+  /* Colores */
+  --verde: #5c6a47;
+  --verde-oscuro: #4b5739;
+  --verde-suave: #8a9670;
+  --crema: #f6efe0;
+  --crema-claro: #fbf7ee;
+  --blanco: #ffffff;
+
+  /* Tipografías */
+  --fuente-titulos: 'Caveat', cursive;
+  --fuente-textos: 'Nunito', sans-serif;
+
+  /* Tamaños */
+ --tam-nombres: clamp(3.6rem, 17vw, 7rem);
+  --tam-titulo: clamp(2.6rem, 11vw, 3.8rem);
+  --tam-subtitulo: clamp(1.6rem, 7vw, 2.2rem);
+  --tam-texto: clamp(1rem, 4vw, 1.2rem);
+  --tam-texto-chico: clamp(0.9rem, 3.5vw, 1rem);
+
+  /* Espaciados y otros */
+  --espacio-seccion: 4rem 24px;
+  --radio: 18px;
+  --sombra: 0 8px 20px rgba(75, 87, 57, 0.25);
+  --transicion: 0.3s ease;
+}
+
+/* ===========================
+   RESET Y BASE
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--fuente-textos);
+  font-size: var(--tam-texto);
+  color: var(--verde);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* ===========================
+   TIPOGRAFÍA (clases que se reusan)
+   =========================== */
+
+/* Nombres de la pareja */
+.nombres {
+  font-family: var(--fuente-titulos);
+  font-size: var(--tam-nombres);
+  font-weight: 500;
+  line-height: 0.9;
+  color: var(--verde);
+}
+
+/* Títulos de cada sección: "Fecha", "Lugar", "Regalos"... */
+.titulo {
+  font-family: var(--fuente-titulos);
+  font-size: var(--tam-titulo);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+/* Subtítulos dentro de una sección */
+.subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: var(--tam-subtitulo);
+  font-weight: 500;
+  color: var(--verde);
+}
+
+/* Textos descriptivos */
+.texto {
+  font-family: var(--fuente-textos);
+  font-size: var(--tam-texto);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--verde);
+}
+
+.texto-chico {
+  font-family: var(--fuente-textos);
+  font-size: var(--tam-texto-chico);
+  color: var(--verde-suave);
+}
+
+/* ===========================
+   SECCIONES
+   =========================== */
+.seccion {
+  padding: var(--espacio-seccion);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ===========================
+   BOTONES
+   =========================== */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.95rem 2.6rem;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--verde);
+  color: var(--crema);
+  font-family: var(--fuente-textos);
+  font-size: var(--tam-texto);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.boton:hover {
+  background-color: var(--verde-oscuro);
+  transform: translateY(-2px);
+}
+
+.boton:focus {
+  outline: none;
+}
+
+.boton:focus-visible {
+  outline: 2px solid var(--verde-oscuro);
+  outline-offset: 3px;
+}
+
+
+
+
+
+.boton__flecha {
+  font-size: 1.2em;
+  transition: transform var(--transicion);
+}
+
+.boton:hover .boton__flecha {
+  transform: translateX(5px);
+}
+
+/* ===========================
+   FORMULARIOS (para la confirmación)
+   =========================== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--verde-suave);
+  border-radius: 12px;
+  background-color: var(--crema-claro);
+  font-family: var(--fuente-textos);
+  font-size: 1rem;
+  color: var(--verde);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--verde);
+}
+
+/* ===========================
+   ANIMACIONES
+   =========================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.8s; }
+.delay-3 { animation-delay: 1.3s; }
+.delay-4 { animation-delay: 1.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .fade-up {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+
+
+/* ===========================
+   CONTENIDO DE LA TARJETA
+   =========================== */
+.contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   APARICIÓN AL HACER SCROLL (con rebote)
+   =========================== */
+.aparecer {
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+}
+
+.reveal--visible .aparecer {
+  animation-name: aparecerRebote;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes aparecerRebote {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes dibujarLinea {
+  to { stroke-dashoffset: 0; }
+}
+
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
