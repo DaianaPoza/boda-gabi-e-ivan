@@ -41,8 +41,8 @@ export default function FechaHora() {
         Guardá este día 
       </h2>
 
-      <div className="aparecer delay-2">
-        <div className="fecha__calendario">
+<div className="fecha__envoltorio aparecer delay-2">
+  <div className="fecha__calendario">
           <span className="fecha__cinta" aria-hidden="true" />
 
           <p className="subtitulo fecha__mes">Diciembre · {ANIO}</p>

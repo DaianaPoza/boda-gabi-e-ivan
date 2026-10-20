@@ -33,7 +33,7 @@
 /* Grilla de días */
 .fecha__grilla {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 0.35rem;
 }
 
@@ -101,4 +101,10 @@
   font-size: clamp(2.2rem, 10vw, 3rem);
   font-weight: 600;
   line-height: 1;
+}
+
+.fecha__envoltorio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

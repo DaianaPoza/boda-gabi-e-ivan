@@ -270,3 +270,19 @@ textarea:focus {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.12); }
 }
+
+
+.nombres {
+  /* ...lo que ya tenía... */
+  padding: 0 0.2em;
+}
+
+.titulo {
+  /* ...lo que ya tenía... */
+  padding: 0 0.2em;
+}
+
+.subtitulo {
+  /* ...lo que ya tenía... */
+  padding: 0 0.2em;
+}
