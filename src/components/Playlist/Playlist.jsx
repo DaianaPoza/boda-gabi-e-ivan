@@ -2,7 +2,7 @@ import useReveal from '../../hooks/useReveal'
 import { FaSpotify } from 'react-icons/fa'
 import './Playlist.css'
 
-const LINK_PLAYLIST = ''   // ← acá va el link de la playlist colaborativa
+const LINK_PLAYLIST = 'https://open.spotify.com/playlist/5ifdRfBbicOpQuyXA2QQxh?si=1JK0qrW-TO-YSyc10Va4DA&utm_source=copy-link&pt=6fbac974266efa9eceee7660fd789dfc&pi=AOTekdWXQ4qJQ'   // ← acá va el link de la playlist colaborativa
 
 export default function Playlist() {
   const ref = useReveal()
