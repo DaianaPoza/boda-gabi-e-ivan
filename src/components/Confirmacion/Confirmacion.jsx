@@ -1,6 +1,7 @@
-import { useState } from 'react'
+
 import useReveal from '../../hooks/useReveal'
 import './Confirmacion.css'
+import { useEffect, useRef, useState } from 'react'
 
 const URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbytxZbrztqaKmpwikxRBIDftIlnO3BuHgZTht3eGPKE2DJ5xYLmwkpCoImaSQgv-IwDYw/exec'              // ← pegá acá la URL que termina en /exec
 const FECHA_LIMITE = ''            // ← ej: '20 de noviembre' (si queda vacío, no se muestra)
@@ -16,6 +17,15 @@ export default function Confirmacion() {
   const [invitados, setInvitados] = useState([invitadoVacio()])
   const [estado, setEstado] = useState('inicial')   // inicial | enviando | enviado | error
   const [mensajeError, setMensajeError] = useState('')
+
+  const cajaRef = useRef(null)
+
+// Al registrarse la respuesta, centra el mensaje en la pantalla
+useEffect(() => {
+  if (estado === 'enviado') {
+    cajaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+}, [estado])
 
   const asiste = asistencia === 'Sí'
 
@@ -84,7 +94,7 @@ export default function Confirmacion() {
       <h2 className="titulo aparecer delay-1">¿Venís?</h2>
 
       <p className="texto manuscrita confirmacion__texto aparecer delay-1">
-        Nos encantaría que seas parte de este día
+        Nos encantaría que seas parte <br /> de este día
         {FECHA_LIMITE && (
           <> Confirmá tu asistencia antes del <strong>{FECHA_LIMITE}</strong>.</>
         )}
@@ -101,7 +111,7 @@ export default function Confirmacion() {
 
 
 
-      <div className="confirmacion__caja aparecer delay-2">
+     <div ref={cajaRef} className="confirmacion__caja aparecer delay-2">
         {estado === 'enviado' ? (
           /* ===== MENSAJE DE RESPUESTA REGISTRADA ===== */
           <div className="confirmacion__gracias" role="status">
@@ -113,7 +123,7 @@ export default function Confirmacion() {
             <p className="confirmacion__registrada">¡Tu respuesta fue registrada!</p>
 
             <p className="subtitulo">
-              {asiste ? '¡Qué alegría! Nos vemos en la fiesta' : 'Gracias por avisarnos, los vamos a extrañar'}
+              {asiste ? '¡Nos vemos en la fiesta!' : 'Gracias por avisarnos, los vamos a extrañar'}
             </p>
 
             <div className="confirmacion__resumen">
