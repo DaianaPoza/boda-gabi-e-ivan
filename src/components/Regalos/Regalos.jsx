@@ -40,12 +40,12 @@ export default function Regalos() {
 
       <h2 className="titulo aparecer delay-1">Regalos</h2>
 
-      <p className="texto regalos__texto aparecer delay-2">
-        ¡Nos hace mucha ilusión celebrar con vos!
-      </p>
-      <p className="texto regalos__texto aparecer delay-2">
-     Si además deseás tener un detalle <br /> con nosotros, podés encontrar <br /> nuestro alias  acá...
-      </p>
+   <p className="texto manuscrita regalos__texto aparecer delay-2">
+  ¡Nos hace mucha ilusión <br /> celebrar con vos!
+</p>
+<p className="texto manuscrita regalos__texto aparecer delay-2">
+  Si querés tener un detalle <br /> con nosotros, te dejamos <br /> nuestro alias
+</p>
 
       <button
         type="button"
@@ -77,7 +77,7 @@ export default function Regalos() {
             <p className="texto-chico regalos__etiqueta regalos__etiqueta--titular">
               Titular
             </p>
-            <p className="texto regalos__titular">{TITULAR}</p>
+            <p className="texto manuscrita regalos__titular">{TITULAR}</p>
           </div>
         </div>
       </div>

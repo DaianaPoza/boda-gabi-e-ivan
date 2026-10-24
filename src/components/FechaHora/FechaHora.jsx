@@ -78,7 +78,7 @@ export default function FechaHora() {
         </div>
       </div>
 
-      <p className="texto aparecer delay-3">Sábado 5 de diciembre</p>
+      <p className="texto manuscrita aparecer delay-3">Sábado 5 de diciembre </p>
      <p className="subtitulo fecha__hora aparecer delay-3">{HORA_TEXTO}</p>
 
       <a

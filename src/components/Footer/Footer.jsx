@@ -6,9 +6,7 @@ export default function Footer() {
 
   return (
     <footer ref={ref} className="seccion footer">
-      <p className="texto footer__texto aparecer delay-1">
-        ¡¡Gracias por acompañarnos!!
-      </p>
+     
 
       <p className="subtitulo footer__pronto aparecer delay-2">
         ¡Nos vemos pronto!
@@ -22,7 +20,7 @@ export default function Footer() {
       <span className="footer__nombres-texto">Gabi e Iván</span>
     </p>
 
-    <p className="texto footer__fecha">05 · 12 · 2026</p>
+   <p className="texto manuscrita footer__fecha">05 · 12 · 2026</p>
   </div>
 </div>
 

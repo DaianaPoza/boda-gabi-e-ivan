@@ -60,7 +60,7 @@ grid-template-columns: repeat(7, minmax(0, 1fr));
   background-color: var(--verde);
   color: var(--crema);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   border-radius: 50%;
   animation: latido 1.6s ease-in-out 2.5s infinite;
 }
@@ -101,10 +101,12 @@ grid-template-columns: repeat(7, minmax(0, 1fr));
   font-size: clamp(2.2rem, 10vw, 3rem);
   font-weight: 600;
   line-height: 1;
+  margin-top: 1.2rem
 }
 
 .fecha__envoltorio {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 1.8rem
 }

@@ -4,7 +4,7 @@ import './Confirmacion.css'
 
 const URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbytxZbrztqaKmpwikxRBIDftIlnO3BuHgZTht3eGPKE2DJ5xYLmwkpCoImaSQgv-IwDYw/exec'              // ← pegá acá la URL que termina en /exec
 const FECHA_LIMITE = ''            // ← ej: '20 de noviembre' (si queda vacío, no se muestra)
-const CANTIDAD_MAXIMA = 6
+const CANTIDAD_MAXIMA = 2
 const RESTRICCIONES = ['Ninguna', 'Vegano', 'Vegetariano', 'Celíaco', 'Alergia', 'Otra']
 const PIDEN_DETALLE = ['Alergia', 'Otra']
 
@@ -83,12 +83,23 @@ export default function Confirmacion() {
     <section ref={ref} className="seccion confirmacion">
       <h2 className="titulo aparecer delay-1">¿Venís?</h2>
 
-      <p className="texto confirmacion__texto aparecer delay-1">
-        Nos encantaría que seas parte de este día.
+      <p className="texto manuscrita confirmacion__texto aparecer delay-1">
+        Nos encantaría que seas parte de este día
         {FECHA_LIMITE && (
           <> Confirmá tu asistencia antes del <strong>{FECHA_LIMITE}</strong>.</>
         )}
       </p>
+
+
+{/* ===== NOTA: SOLO ADULTOS ===== */}
+      <p className="texto manuscrita confirmacion__nota aparecer delay-1">
+        Pensamos esta noche para que disfrutes sin horarios ni apuros, por eso será una celebración solo para adultos
+      </p>
+
+
+
+
+
 
       <div className="confirmacion__caja aparecer delay-2">
         {estado === 'enviado' ? (

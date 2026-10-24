@@ -3,23 +3,31 @@
    =========================== */
 :root {
   /* Colores */
-  --verde: #5c6a47;
-  --verde-oscuro: #4b5739;
-  --verde-suave: #8a9670;
-  --crema: #f6efe0;
-  --crema-claro: #fbf7ee;
-  --blanco: #ffffff;
+--verde: #3f4a33;
+--verde-oscuro: #2c3424;
+--verde-suave: #66704f;
+--crema: #f4f3e6;
+--crema-claro: #fbfaf2;
+--blanco: #ffffff;
 
-  /* Tipografías */
-  --fuente-titulos: 'Caveat', cursive;
-  --fuente-textos: 'Nunito', sans-serif;
+/* Tipografías */
+--fuente-titulos: 'Dancing Script', cursive;
+--fuente-textos: 'Nunito', sans-serif;
 
-  /* Tamaños */
- --tam-nombres: clamp(3.6rem, 17vw, 7rem);
-  --tam-titulo: clamp(2.6rem, 11vw, 3.8rem);
-  --tam-subtitulo: clamp(1.6rem, 7vw, 2.2rem);
-  --tam-texto: clamp(1rem, 4vw, 1.2rem);
-  --tam-texto-chico: clamp(0.9rem, 3.5vw, 1rem);
+/* Halo suave para que los textos se separen del fondo */
+.nombres,
+.titulo,
+.subtitulo,
+.texto {
+  text-shadow:
+    0 0 6px rgba(251, 250, 242, 0.95),
+    0 0 14px rgba(251, 250, 242, 0.8);
+}
+
+/* Tamaños */
+--tam-nombres: clamp(3.2rem, 14vw, 6rem);
+--tam-titulo: clamp(2.4rem, 10vw, 3.4rem);
+--tam-subtitulo: clamp(1.5rem, 6.5vw, 2rem);
 
   /* Espaciados y otros */
   --espacio-seccion: 4rem 24px;
@@ -106,6 +114,23 @@ h1, h2, h3, p {
   font-size: var(--tam-texto-chico);
   color: var(--verde-suave);
 }
+
+
+
+/* Textos descriptivos en manuscrita */
+.manuscrita {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.35rem, 5.8vw, 1.65rem);
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+
+
+
+
+
+
 
 /* ===========================
    SECCIONES

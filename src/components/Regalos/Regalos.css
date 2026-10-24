@@ -60,9 +60,9 @@
 }
 
 .regalos__etiqueta {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
 .regalos__etiqueta--titular {

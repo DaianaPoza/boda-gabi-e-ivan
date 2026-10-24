@@ -171,3 +171,13 @@
   padding: 0;
   font-weight: 700;
 }
+
+
+
+.confirmacion__nota {
+  max-width: 320px;
+  padding: 0.8rem 1.2rem;
+  border: 1.5px dashed var(--verde-suave);
+  border-radius: 14px;
+  background-color: rgba(251, 250, 242, 0.85);
+}

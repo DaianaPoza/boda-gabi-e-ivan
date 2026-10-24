@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import Portada from './components/Portada/Portada'
 import FondoTarjeta from './components/FondoTarjeta/FondoTarjeta'
-import LluviaMargaritas from './components/LluviaMargaritas/LluviaMargaritas'
+
 import BotonMusica from './components/BotonMusica/BotonMusica'
 import Header from './components/Header/Header'
 import FechaHora from './components/FechaHora/FechaHora'
@@ -32,7 +32,7 @@ function App() {
       {abierta && (
         <>
           <FondoTarjeta />
-          <LluviaMargaritas />
+         
           <BotonMusica audioRef={audioRef} />
 
           <main className="contenido">

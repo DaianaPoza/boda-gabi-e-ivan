@@ -21,9 +21,9 @@ export default function Playlist() {
 
       <h2 className="titulo aparecer delay-1">¡Armemos la playlist!</h2>
 
-      <p className="texto playlist__texto aparecer delay-2">
-      ¡¡  Queremos que la fiesta <br />suene para todos!!
-      <br />  Sumá sos temas que te hacen <br /> salir a bailar
+      <p className="texto manuscrita playlist__texto aparecer delay-2">
+      ¡¡  Queremos que la fiesta, <br />suene para todos!!
+      <br />  Sumá esos temas que te hacen <br /> salir a bailar...
       </p>
 
       {hayLink ? (

@@ -23,7 +23,7 @@ export default function AlbumCompartido() {
 
       <h2 className="titulo aparecer delay-1">¡Que no se pierda ningún momento!</h2>
 
-      <p className="texto album__texto aparecer delay-2">
+     <p className="texto manuscrita album__texto aparecer delay-2">
         Queremos ver la fiesta desde tus ojos.
         Compartí tus fotos en nuestro álbum.
       </p>
