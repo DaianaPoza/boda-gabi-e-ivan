@@ -19,7 +19,7 @@ export default function Portada({ abierta, onEnter }) {
         </h1>
 
       <p className="texto manuscrita fade-up delay-3">
-  Y queremos compartirlo con vos.
+  Y queremos compartirlo con vos...
 </p>
 
         <button

@@ -2,7 +2,7 @@ import { FiCamera } from 'react-icons/fi'
 import useReveal from '../../hooks/useReveal'
 import './AlbumCompartido.css'
 
-const LINK_ALBUM = ''   // ← acá va el link de El Gran Día
+const LINK_ALBUM = 'https://www.elgrandia.events/album/boda-gabi-e-ivan'   // ← acá va el link de El Gran Día
 
 const PASOS = [
   'Sacá fotos y videos durante la fiesta',
